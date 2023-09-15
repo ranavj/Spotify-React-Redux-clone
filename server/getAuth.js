@@ -1,7 +1,7 @@
 // import axios from 'axios';
 // import qs from 'qs';
-// let CLIENT_ID = 'db40fb5848c54fafa2ec00834f89706a';
-// let CLIENT_SECRET = 'ffa7c5b9b79d4d23bf9e0e1727aec69f';
+// let CLIENT_ID = '';
+// let CLIENT_SECRET = '';
 
 // export const getAuth = async () => {
 //   const clientId = CLIENT_ID;
