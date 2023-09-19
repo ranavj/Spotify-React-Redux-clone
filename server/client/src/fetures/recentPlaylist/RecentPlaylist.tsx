@@ -5,15 +5,14 @@ import { accessToken } from "../../spotify";
 import { fetchRecentPlaylist } from "./recentPlaylistSclice";
 import { NavigationList } from "../../components/NavigationList";
 import { NavigationListRes } from "../../utility/interface";
-import { CategoryItem } from "../../components/CategoryItem";
 import { Searchbar } from "../../components/Searchbar";
 import { UserProfile } from "../../components/UserProfile";
-import { fetchBrowseCategory, selectBrowseCategory } from "../browseCategory/browseCategorySlice";
+import { fetchBrowseCategory } from "../browseCategory/browseCategorySlice";
 import { SeacrchResult } from "../../components/SearchResult";
+import { Footer } from "../../components/Footer";
 
 export const RecentPlaylist = () => {
     const getPlaylist: any = useSelector(selectUserPlaylist);
-    const getBrowseCategory : any = useSelector(selectBrowseCategory)
     const [token, setToken] = useState<string | null | false>(null);
     const dispatch = useDispatch();
 
@@ -67,6 +66,7 @@ export const RecentPlaylist = () => {
             </div>
         </section>
         <div className="col-span-1 row-span-5 text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt mollitia sunt reiciendis labore placeat soluta ad nostrum aperiam provident libero cupiditate rerum culpa rem obcaecati sint vero, sequi dicta dolorem.</div>
+        <Footer />
     </div>
     )
 }
