@@ -29,11 +29,12 @@ var stateKey = 'spotify_auth_state';
 // app.get('/', getAuth);
 
 app.get('/login', (req, res) => {
+  console.log('enter login')
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
 
   // your application requests authorization
-  var scope = 'streaming user-read-private user-read-email playlist-modify-public user-read-recently-played playlist-read-private playlist-read-collaborative playlist-modify-private user-read-playback-state user-modify-playback-state user-read-currently-playing';
+  var scope = 'streaming user-read-private user-read-email playlist-modify-public user-read-recently-played playlist-read-private playlist-read-collaborative playlist-modify-private user-read-playback-state user-modify-playback-state user-read-currently-playing user-library-read user-library-modify';
   res.redirect('https://accounts.spotify.com/authorize?' +
   qs.stringify({
     response_type: 'code',
@@ -112,3 +113,4 @@ app.listen(8888, (error) =>{
     else
         console.log("Error occurred, server can't start", error);
 });
+

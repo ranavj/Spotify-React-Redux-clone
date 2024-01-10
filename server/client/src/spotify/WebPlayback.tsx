@@ -67,6 +67,8 @@ export const WebPlayback = ({ children }: any) => {
     webPlaybackInstance.on('ready', (data: { device_id: any; }) => {
       setDeviceId(data.device_id);
       setActiveDevice(data.device_id);
+      console.log('The Web Playback SDK is ready to play music!', data);
+
     });
 
     if (true) {
